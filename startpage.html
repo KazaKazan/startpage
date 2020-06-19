@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Font links --> 
+
+<link href='https://fonts.googleapis.com/css?family=Space+Mono' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+<style>
+
+/* Root Stuff */
+:root{
+--bg-color: #0e0e0e;
+--accent-color: #d87de3;
+--accent-color-alt: #7de3e0;
+}
+
+/* Link Colors */
+a:link    {color: var(--accent-color-alt);}
+a:visited {color: var(--accent-color-alt);}
+a:hover   {color: var(--accent-color);}
+a:active  {color: var(--accent-color);} 
+
+/* Classes */
+.menudiv {font-family: 'Raleway'; font-size: 2.5vh; color: var(--accent-color-alt); text-align: center; display: inline-block;}
+.hstyle  {border-top: 3px dashed var(--accent-color); color: var(--bg-color);}
+
+a, u {
+    text-decoration: none;
+}
+
+</style>
+
+<script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      h = checkTime(h);
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('hour').innerHTML = h;
+      document.getElementById('minute').innerHTML = m;
+      document.getElementById('second').innerHTML = s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+</script>
+
+</head>
+
+<body style="background-color: var(--bg-color);" onload="startTime()">
+
+<!-- Something like a header but not really --> 
+<div style="line-height: 0px; text-align: right;">
+<a href="https://github.com/KazaKazan/startpage"><img src="./startpage/github.png" alt="github"></a>
+</div>
+
+<!-- Clock Tiem  --> 
+<div style="line-height: 0px; font-family: 'Space Mono'; font-size: 17vh;">
+<p style="text-align: center; color: var(--accent-color-alt);"><span id="hour"></span><span id="minute" style="color: var(--accent-color);"></span><span id="second"></span></p>
+</div>
+
+<!-- Links and Whatnot  --> 
+
+<div style="margin-left: 15%; margin-right: 15%;">,
+
+<div style="text-align: center;">
+
+  <hr class="hstyle">
+
+    <div class="menudiv">
+    <p>Computer Stuff</p>
+    <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
+    <p><a href="https://github.com/">GitHub</a></p>
+    <p><a href="https://wiki.archlinux.org/">ArchWiki</a></p>
+    <p><a href="https://docs.godotengine.org/en/stable/">Godot Docs</a></p>
+    </div>
+
+    <div class="menudiv" style="margin-left: 10vw; margin-right: 10vw;">
+    <p>Personal</p>
+    <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
+    <p><a href="https://kazakaza.xyz">KazaKaza</a></p>
+    <p><a href="https://www.linkedin.com/">LinkedIn</a></p>
+    <p><a href="https://www.pixiv.net/en/">Pixiv</a></p>
+    </div>
+
+    <div class="menudiv">
+    <p>Entertainment</p>
+    <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
+    <p><a href="https://www.youtube.com/">Youtube</a></p>
+    <p><a href="https://www.reddit.com/">Reddit</a></p>
+    <p><a href="https://boards.4chan.org/wg/">/wg/</a></p>
+    </div>
+
+  <hr class="hstyle">
+
+</div>
+
+</div>
+
+</body>
+</html>
