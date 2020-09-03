@@ -12,6 +12,7 @@
 <style>
 
 /* Root Stuff */
+
 :root{
 --bg-color: #0e0e0e;
 --accent-color: #d87de3;
@@ -25,7 +26,7 @@ a:hover   {color: var(--accent-color);}
 a:active  {color: var(--accent-color);} 
 
 /* Classes, IDs and such */
-.menudiv {font-family: 'Raleway'; font-size: 2.5vh; color: var(--accent-color-alt); text-align: center; display: inline-block; vertical-align: top;}
+.menudiv {font-family: 'Raleway'; font-size: min(2vw, 25px); color: var(--accent-color-alt); text-align: center; display: inline-block; vertical-align: top; margin: 1.5vw}
 .hstyle  {border-top: 3px dashed var(--accent-color); color: var(--bg-color);}
 
 a, u {
@@ -37,7 +38,7 @@ a, u {
     outline: 0;
     background: transparent;
     color: var(--accent-color-alt);
-    font-size: 2.5vh;
+    font-size: min(2.5vw, 25px);
     height: 3vh;
     text-align: center;
     width: 100%;
@@ -66,10 +67,6 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 };
-
-function assignLink() {
-
-}
 </script>
 
 </head>
@@ -85,7 +82,7 @@ function assignLink() {
 <div style="margin-left: 15%; margin-right: 15%;">
 
 <!-- Clock Tiem  --> 
-<div style="line-height: 0px; font-family: 'Space Mono'; font-size: 17vh;">
+<div style="line-height: 0px; font-family: 'Space Mono'; font-size: min(15vw, 150px);">
   <p style="text-align: center; color: var(--accent-color-alt);"><span id="hour"></span><span id="minute" style="color: var(--accent-color);"></span><span id="second"></span></p>
   </div>
 
@@ -100,7 +97,8 @@ function assignLink() {
 
   <hr class="hstyle">
 
-    <!-- Links and Whatnot  --> 
+    <!-- Links and Whatnot, You can fit 4 categories here for best scaling, although you can probably pull of 6 for a widescreen -->
+	<!-- Each category can have a varying number of links, I've tested up to 10 and it works just fine -->	
     <div class="menudiv">
     <p>Category</p>
     <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
@@ -109,7 +107,7 @@ function assignLink() {
     <p><a href="[LINK HERE]">Link</a></p>
     </div>
 
-    <div class="menudiv" style="margin-left: 10vw; margin-right: 10vw;">
+    <div class="menudiv">
     <p>Category</p>
     <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
     <p><a href="[LINK HERE]">Link</a></p>
@@ -123,7 +121,14 @@ function assignLink() {
     <p><a href="[LINK HERE]">Link</a></p>
     <p><a href="[LINK HERE]">Link</a></p>
     <p><a href="[LINK HERE]">Link</a></p>
-
+    </div>
+	
+	<div class="menudiv">
+    <p>Category</p>
+    <p style="color: var(--accent-color); line-height: 0px;">---------------</p>
+    <p><a href="[LINK HERE]">Link</a></p>
+    <p><a href="[LINK HERE]">Link</a></p>
+    <p><a href="[LINK HERE]">Link</a></p>
     </div>
 
   <hr class="hstyle">
